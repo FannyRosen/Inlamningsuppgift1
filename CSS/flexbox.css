@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rosybrown;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  height: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 30px;
+}
+
+section {
+  background-color: linen;
+  flex: 2;
+  min-height: 30vw;
+}
+
+main > section:first-child,
+main > section:last-child {
+  flex: 1;
+}
+
+section > p,
+.listcontainer {
+  padding: 20px;
+}
+
+.imagecontainer {
+  height: 50vh;
+  width: 50%;
+  margin: auto;
+  background-image: url('../Bilder/headshot.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+    min-height: 80vh;
+  }
+  .imagecontainer {
+    width: 100%;
+    height: 100%;
+  }
+}
